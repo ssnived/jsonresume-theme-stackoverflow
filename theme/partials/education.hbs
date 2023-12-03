@@ -16,7 +16,6 @@
       <label for="education-item-{{@index}}"></label>
       {{/if}}
       <header class="clear">
-        <div class="header-left">
           {{#if studyType}}
           <div class="studyType">
             {{studyType}}
@@ -47,29 +46,17 @@
             - Current
           </span>
           {{/if}}
-        </div>
-          {{#location}}
-          <div class="location">
-          <span class="fas fa-map-marker-alt"></span>
-          {{#if city}}
-          <span class="city">{{city}}, </span>
-          {{/if}}
-          {{#if countryCode}}
-          <span class="countryCode">({{countryCode}})</span>
-          {{/if}}
-          {{#if region}}
-          <span class="region">{{region}}</span>
-          {{/if}}
-        </div>
-      {{/location}}
-        </div>
-        <div class="item">
-          {{#if gpa}}
-          <div class='gpa'>
-          <strong> Grade:</strong> <span>{{gpa}}</span>
-          </div>
-          {{/if}}
+         </div>
       </header>
+
+      {{#location}}
+			<div class="location">
+				{{#if location}}
+				<span class="fas fa-map-marker-alt"></span>
+				<span class="city">{{location}}</span>
+				{{/if}}
+			</div>
+      {{/location}}
 
       {{#if courses.length}}
       <ul class="courses">
@@ -80,6 +67,11 @@
       {{/if}}
 
       <div class="item">
+        {{#if gpa}}
+        <div class='gpa'>
+          <strong> GPA:</strong> <span>{{gpa}}</span>
+        </div>
+        {{/if}}
         {{#if summary}}
         <div class="summary">{{paragraphSplit summary}}</div>
         {{/if}}
