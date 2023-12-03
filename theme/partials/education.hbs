@@ -32,22 +32,7 @@
             {{institution}}
           </div>
           {{/if}}
-          {{#location}}
-          <div class="location">
-          <span class="fas fa-map-marker-alt"></span>
-          {{#if city}}
-          <span class="city">{{city}}, </span>
-          {{/if}}
-          {{#if countryCode}}
-          <span class="countryCode">({{countryCode}})</span>
-          {{/if}}
-          {{#if region}}
-          <span class="region">{{region}}</span>
-          {{/if}}
-        </div>
-      {{/location}}
-        </div>
-        <div class="date">
+          <div class="date">
           {{#if startDate}}
           <span class="startDate">
             {{Y startDate}}
@@ -62,6 +47,21 @@
             - Current
           </span>
           {{/if}}
+        </div>
+          {{#location}}
+          <div class="location">
+          <span class="fas fa-map-marker-alt"></span>
+          {{#if city}}
+          <span class="city">{{city}}, </span>
+          {{/if}}
+          {{#if countryCode}}
+          <span class="countryCode">({{countryCode}})</span>
+          {{/if}}
+          {{#if region}}
+          <span class="region">{{region}}</span>
+          {{/if}}
+        </div>
+      {{/location}}
         </div>
         <div class="item">
           {{#if gpa}}
